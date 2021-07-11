@@ -1,6 +1,6 @@
 // contracts/NFToken.sol
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.2 <0.8.0;
+pragma solidity >=0.7.0 <0.8.0;
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
