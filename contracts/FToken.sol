@@ -15,10 +15,10 @@ contract FToken is ERC20 {
      * Constructor that gives msg.sender all of existing tokens.
      */
     constructor(
-        string memory name,
-        string memory symbol,
-        uint256 initialSupply
-    ) ERC20(name, symbol) {
-        _mint(msg.sender, initialSupply);
+        string memory _name,
+        string memory _symbol,
+        uint256 _initialSupply
+    ) ERC20(_name, _symbol) {
+        _mint(msg.sender, _initialSupply);
     }
 }

@@ -15,21 +15,21 @@ contract NFToken is ERC721 {
      * Constructor that sets a name and a symbol for the token.
      */
     constructor (
-        string memory name, 
-        string memory symbol
-        ) ERC721(name, symbol)
+        string memory _name, 
+        string memory _symbol
+        ) ERC721(_name, _symbol)
     { }
 
     /**
     * Custom accessor to create a unique token and assign to an owner
     */
     function mintUniqueTokenTo(
-        address to,
-        uint256 tokenId,
-        string memory tokenURI
+        address _to,
+        uint256 _tokenId,
+        string memory _tokenURI
     ) public
     {
-        _safeMint(to, tokenId);
-        _setTokenURI(tokenId, tokenURI);
+        _safeMint(_to, _tokenId);
+        _setTokenURI(_tokenId, _tokenURI);
     }
 }

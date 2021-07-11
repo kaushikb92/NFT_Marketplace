@@ -1,7 +1,6 @@
 const FToken = artifacts.require('FToken');
-const NFToken = artifacts.require('NFToken');
+const NFTMarketplace = artifacts.require('NFTMarketplace');
 
 module.exports = async function (deployer) {
-  await deployer.deploy(FToken, 'FToken', 'FT', '10000000000000000000000');
-  await deployer.deploy(NFToken, 'NFToken', 'NFT');
+  await deployer.deploy(FToken, 'FToken', 'FT', '10000000000000000000000').then(() => deployer.deploy(NFTMarketplace, FToken.address));
 };
