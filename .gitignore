@@ -1,6 +1,12 @@
 # misc
 .DS_Store
 
+# Build
+build 
+
+# Package-lock.JSON
+package-lock.json
+
 # Logs
 logs
 *.log
