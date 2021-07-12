@@ -31,7 +31,7 @@ contract NFTMarketplace is NFToken {
     }
 
     /**
-     * Function that takes a token id and returns price of anon fungible token 
+     * Function that takes a token id and returns price of a non fungible token 
      */
     function getCurrentPrice(uint256 _tokenId) public view returns (uint256) {
         require(_exists(_tokenId));
@@ -71,6 +71,6 @@ contract NFTMarketplace is NFToken {
         require(!_exists(_tokenId));
         mintUniqueTokenTo(msg.sender, _tokenId, _tokenUri);
         setCurrentPrice(_tokenId, _price);
-        Register(msg.sender, _tokenId, _tokenUri, _price);
+        emit Register(msg.sender, _tokenId, _tokenUri, _price);
     }
 }
